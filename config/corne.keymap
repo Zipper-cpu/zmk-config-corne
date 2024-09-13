@@ -89,9 +89,9 @@
 
                 adjust_layer {
 // .--------------------------------------------------------.       .----------------------------------------------------------------.
-// |  BTCLR  |   BT1  |  BT2   |  BT3   |   BT4   |   BT5   |       |        |   Pause  |         |         |          |             |
+// |  BTCLR  |   BT1  |  BT2   |  BT3   |   BT4   |   BT5   |       |        |          |         |         |          |             |
 // |---------+--------+--------+--------+---------+---------|       |--------+----------+---------+---------+----------+-------------|
-// |         |        |        |        |         |         |       |        |   Play   |   VOL+  |         |          |             |
+// |         |        |        |        |         |         |       |        |Play/Pause|   VOL+  |         |          |             |
 // |---------+--------+--------+--------+---------+---------|       |--------+----------+---------+---------+----------+-------------|
 // |         |        |        |        |         |         |       |        |   Prev   |   VOL-  |   Next  |          |             |
 // '---------------------------+--------+---------+---------+       |--------+----------+---------+----------------------------------'
@@ -99,10 +99,10 @@
 //                             '--------+---------+---------'       '--------+----------+---------'
 
                         bindings = <
-   &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4      &trans  &C PAUSE 	 &trans 		   &trans   &trans &trans
-   &trans      &trans          &trans         &trans          &trans          &trans      		&trans  &kp PLAY 	 &kp C_VOLUME_UP   &trans   &trans &trans
-   &trans      &trans          &trans         &trans          &trans          &trans            &trans  &kp PREV     &kp C_VOLUME_DOWN &KP NEXT &trans &trans
-											  &trans 		  &trans 		  &trans   			&trans  &trans 	     &trans
+   &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4      &trans  &trans 	 &trans 		   &trans   &trans &trans
+   &trans      &trans          &trans         &trans          &trans          &trans      		&trans  &C PP 	 &kp C_VOLUME_UP   &trans   &trans &trans
+   &trans      &trans          &trans         &trans          &trans          &trans            &trans  &kp PREV &kp C_VOLUME_DOWN &KP NEXT &trans &trans
+											  &trans 		  &trans 		  &trans   			&trans  &trans 	 &trans
                         >;
                 };
         };
