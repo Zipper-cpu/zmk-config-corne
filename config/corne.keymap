@@ -37,7 +37,8 @@
                 <&kp LALT>,
                 <&macro_tap>,
                 <&kp KP_NUMBER_3 &kp KP_NUMBER_8>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LALT>;
 
             label = "SYMBOLL_AMPERSANT";
             wait-ms = <40>;
