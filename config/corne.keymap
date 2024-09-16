@@ -28,6 +28,21 @@
         };
     };
 
+    macros {
+        Symboll_Ampersand: Symboll_ampersant {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_3 &kp KP_NUMBER_8>,
+                <&macro_release>;
+
+            label = "SYMBOLL_AMPERSANT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -62,10 +77,10 @@
             //                                   '--------+---------+---------'       '-------+---------+---------'
 
             bindings = <
-&kp ESC    &kp N1       &kp N2        &kp N3    &kp N4          &kp N5              &kp N6             &kp N7           &kp N8           &kp N9        &kp N0          &kp GRAVE
-&kp LSHFT  &kp EXCL     &kp AT        &kp HASH  &kp DLLR        &kp PRCNT           &kp CARET          &kp AMPS         &kp KP_MULTIPLY  &kp LPAR      &kp RPAR        &kp COLON
-&kp LCTRL  &kp KP_PLUS  &kp KP_MINUS  &kp LT    &kp LEFT_BRACE  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GT           &kp KP_EQUAL  &kp UNDERSCORE  &kp RALT
-                                      &kp LGUI  &trans          &kp SPACE           &lt NAVI RET       &mo ADJUST       &kp BSPC
+&kp ESC    &kp N1       &kp N2        &kp N3    &kp N4          &kp N5              &kp N6             &kp N7              &kp N8           &kp N9        &kp N0          &kp GRAVE
+&kp LSHFT  &kp EXCL     &kp AT        &kp HASH  &kp DLLR        &kp PRCNT           &kp CARET          &Symboll_Ampersand  &kp KP_MULTIPLY  &kp LPAR      &kp RPAR        &kp COLON
+&kp LCTRL  &kp KP_PLUS  &kp KP_MINUS  &kp LT    &kp LEFT_BRACE  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_BRACE     &kp GT           &kp KP_EQUAL  &kp UNDERSCORE  &kp RALT
+                                      &kp LGUI  &trans          &kp SPACE           &lt NAVI RET       &mo ADJUST          &kp BSPC
             >;
         };
 
